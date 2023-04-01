@@ -1,18 +1,32 @@
-function calcular(tipo, valor) {
-    if (tipo === 'operador') {
-        if (valor === 'c') {
 
-            document.getElementById('pantalla').value = ''//boton limpar
-        }
+function calcular(tipo, valor) {
+    
+    
+       
+    if (tipo === 'operador') {
+       
         if (valor === '*' || valor === '/' || valor === '.' || valor === '+' || valor === '-') {
-            document.getElementById('pantalla').value += valor
+            document.getElementById('acumulador').value += valor;
         }
         if (valor === '=') {
-            document.getElementById('pantalla').value = eval(document.getElementById('pantalla').value)
+            document.getElementById('acumulador').value = eval(document.getElementById('acumulador').value)
         }
 
     } else if (tipo === 'valor') {
 
-        document.getElementById('pantalla').value += valor//concatenar a equação no visor
+        document.getElementById('acumulador').value += valor;//concatenar +=
     }
+    if (valor === 'c') {
+
+        document.getElementById('acumulador').value = '';//boton limpar
+    }
+    console.log(tipo);
+    console.log(valor);
+    console.log(document.getElementById('acumulador').value);
+
+
+
+    
 }
+
+
