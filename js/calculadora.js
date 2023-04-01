@@ -7,11 +7,9 @@ function calcular(tipo, valor) {
         }
         if (valor === '=') {
             const acumuladorValue = document.getElementById('acumulador').value;
-            if (acumuladorValue==='') {
-                
-                
-            }else{
+            if (acumuladorValue) {
                 document.getElementById('acumulador').value = eval(acumuladorValue);
+                
             }
         }
     } else if (tipo === 'valor') {
@@ -25,5 +23,4 @@ function calcular(tipo, valor) {
     console.log('acumulador', document.getElementById('acumulador').value);
     
 }
-
 
