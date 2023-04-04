@@ -9,16 +9,140 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
         integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <!--End Bottstrap 4.5-->
-
+    <!--Iconos Bootstrap 1.10.3-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <!--end iconos de Bootstrap-->
     <!--Estilo propio de Hoja de Estilos-->
     <link rel="stylesheet" href="css/calculadora.css">
     <!--End Hoja de Estilos propia-->
+
+    <!-- ini FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- end FontAwesome -->
+
+    <!-- ini Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nova+Mono&display=swap" rel="stylesheet">
+    <!-- ini Google Fonts -->
 
     <title>Calculadora Sprint Final Módulo 2</title>
 </head>
 
 <body>
 
+    <header>
+
+        <h1>Calculadora</h1>
+
+    </header>
+
+    <div class="container">
+        <div class="row">
+            <div class="col d-flex justify-content-center">
+                <br />
+                <div class="calculadora">
+                    <input id="acumulador" type="text" class="form-control resultado" placeholder="0"
+                        disabled="disabled" />
+
+                    <div class="row">
+                        <button onclick="calcular('operador','c')" type="button"
+                            class="btn btn-dark btn-lg  font-weight-light btn_limpiar boton">
+                            AC</button>
+                        <button onclick="calcular('operador','backSpace')" type="button"
+                            class="btn btn-dark btn-lg  font-weight-light boton">
+                            <i class="fa-solid fa-delete-left"></i></button>
+                        <button onclick="calcular('operador','/')" type="button"
+                            class="btn btn-dark btn-lg font-weight-light boton">
+                            &divide;</button>
+                        <button onclick="calcular('operador','*')" type="button"
+                            class="btn btn-dark btn-lg font-weight-light boton">
+                            x</button>
+                    </div>
+
+                    <div class="row">
+                        <button onclick="calcular('valor','7')" type="button"
+                            class="btn btn-dark btn-lg font-weight-light boton">
+                            7</button>
+                        <button onclick="calcular('valor','8')" type="button"
+                            class="btn btn-dark btn-lg font-weight-light boton">
+                            8</button>
+                        <button onclick="calcular('valor','9')" type="button"
+                            class="btn btn-dark btn-lg font-weight-light boton">
+                            9</button>
+                        <button onclick="calcular('operador','-')" type="button"
+                            class="btn btn-dark btn-lg font-weight-light boton">
+                            -</button>
+                    </div>
+
+                    <div class="row">
+                        <button onclick="calcular('valor','4')" type="button"
+                            class="btn btn-dark btn-lg font-weight-light boton">
+                            4</button>
+                        <button onclick="calcular('valor','5')" type="button"
+                            class="btn btn-dark btn-lg font-weight-light boton">
+                            5</button>
+                        <button onclick="calcular('valor','6')" type="button"
+                            class="btn btn-dark btn-lg font-weight-light boton">
+                            6</button>
+                        <button onclick="calcular('operador','+')" type="button"
+                            class="btn btn-dark btn-lg font-weight-light boton">
+                            +</button>
+                    </div>
+
+                    <div class="row">
+                        <button onclick="calcular('valor','1')" type="button"
+                            class="btn btn-dark btn-lg font-weight-light boton">
+                            1</button>
+                        <button onclick="calcular('valor','2')" type="button"
+                            class="btn btn-dark btn-lg font-weight-light boton">
+                            2</button>
+                        <button onclick="calcular('valor','3')" type="button"
+                            class="btn btn-dark btn-lg font-weight-light boton">
+                            3</button>
+                        <button onclick="calcular('operador','=')" type="button"
+                            class="btn btn-dark btn-lg btn_igual boton">
+                            =</button>
+                    </div>
+
+                    <div class="row" style="margin-top: -60px">
+                        <button onclick="calcular('valor', 0)" type="button"
+                            class="btn btn-dark btn-lg font-weight-light btn_cero boton">
+                            0</button>
+                        <button onclick="calcular('operador','.')" type="button"
+                            class="btn btn-dark btn-lg font-weight-light boton">
+                            .</button>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- inicio Footer-->
+    <footer class="dark-section d-flex flex-column align-items-center justify-content-center">
+        <p class="footer-text text-center">Te Lo Vendo</p>
+        <div class="icons-rrss d-flex flex-wrap align-items-center justify-content-center">
+            <a href="#">
+                <i class="bi bi-whatsapp"></i>
+            </a>
+            <a href="#">
+                <i class="bi bi-facebook"></i>
+            </a>
+            <a href="#">
+                <i class="bi bi-instagram"></i>
+            </a>
+        </div>
+        <div class="authors text-center">Jorge Moraga C., Juan Pino C., Gustavo Ruíz S. &copy; 2023
+        </div>
+    </footer>
+    <!--end Footer-->
 
 
 
